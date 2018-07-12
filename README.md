@@ -1,8 +1,8 @@
 This a set of solutions for 2018 course of RDB at PJA Warsaw. Students of PJA you are more than welcome to participate. Cheers
 
-pass: oracle12
-host: db-oracle
-ssd: baza
+pass: oracle12   
+host: db-oracle   
+ssd: baza   
 
 Data for the tutorials
 
