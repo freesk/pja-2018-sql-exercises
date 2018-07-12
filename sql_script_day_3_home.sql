@@ -1,4 +1,4 @@
--- create two tables woth pk and reference one to another by a fk
+-- create two tables with pk and reference one to another by a fk
 
 drop table student;
 drop table my_group;
@@ -22,7 +22,7 @@ select student_id, first_name, last_name, title from student, my_group where stu
 
 -- version 2
 
--- create two tables woth pk and reference one to another by a fk
+-- create two tables with pk and reference one to another by a fk
 -- create many-to-many relation with sql
 
 drop table my_class;
