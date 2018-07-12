@@ -29,7 +29,7 @@ create table Nurse (
     constraint pk_nurse primary key (nurse_id)
 );
 
-create table Group (
+create table My_Group (
     group_id number generated always as identity (start with 1 increment by 1),
     group_title varchar(16),
     min_age int,
@@ -45,7 +45,7 @@ create table CustomerGroup (
     timestamp int,
 
     constraint pk_customer_group primary key (customer_group_id),
-    constraint fk_group foreign key (group_id) references Group(group_id),
+    constraint fk_group foreign key (group_id) references My_Group(group_id),
     constraint fk_customer foreign key (customer_id) references Customer(customer_id)
 );
 
@@ -56,7 +56,7 @@ create table NurseGroup (
     timestamp int,
 
     constraint pk_nurse_group primary key (nurse_group_id),
-    constraint fk_group foreign key (group_id) references Group(group_id),
+    constraint fk_group foreign key (group_id) references My_Group(group_id),
     constraint fk_nurse foreign key (nurse_id) references Nurse(nurse_id)
 );
 
@@ -64,7 +64,7 @@ create table Place (
     place_id number generated always as identity (start with 1 increment by 1),
     title varchar(36)
 
-    constraints pk_place primary key (place_id)
+    constraint pk_place primary key (place_id)
 );
 
 create table Activity (
