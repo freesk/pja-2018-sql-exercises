@@ -1,6 +1,6 @@
 -- a)
 
--- display all the customers that live in ~Jordan street address
+-- display all the customers that live at ~Jordan street
 -- like method
 select * from Customer where address like ('%Jordan%');
 
