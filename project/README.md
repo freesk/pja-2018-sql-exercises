@@ -1,4 +1,4 @@
-This is a oracle  db project for a baby care center  
+This is a oracle db project for a baby care center  
 
 Requirements:
 
