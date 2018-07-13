@@ -120,3 +120,12 @@ select nurse_id, last_name
 			select max(salary)
 				from nurse_salary_group
 					where group_id = n.group_id);
+
+
+-- having example
+select nurse_id from nurse_salary_group
+	group by nurse_id
+		having avg(salary) = (
+			select max(avg(salary)) from nurse_salary_group
+				group by nurse_id
+		);
