@@ -19,27 +19,39 @@ insert into Customer (customer_id, first_name, last_name, birth_date_unix, addre
 insert into Customer (customer_id, first_name, last_name, birth_date_unix, address, parent_1, parent_2)
     values (6, 'Katty', 'White', 1420070400, 'Jordan str. 98', null, 5);
 
+insert into Customer (customer_id, first_name, last_name, birth_date_unix, address, title)
+    values (7, 'Harry', 'Potter', 662688000, '4 Privet Drive', '.mr');
+
+insert into Customer (customer_id, first_name, last_name, birth_date_unix, address, parent_1, parent_2)
+    values (8, 'James', 'Potter', 1420070400, '4 Privet Drive', null, 7);
+
+insert into Customer (customer_id, first_name, last_name, birth_date_unix, address, parent_1, parent_2)
+    values (9, 'Albus', 'Potter', 1420070400, '4 Privet Drive', null, 7);
+
+insert into Customer (customer_id, first_name, last_name, birth_date_unix, address, parent_1, parent_2)
+    values (10, 'Lily', 'Potter', 1420070400, '4 Privet Drive', null, 7);
 
 
-insert into Nurse (nurse_id, first_name, last_name)
-    values (0, 'Alexa', 'Johnson');
 
-insert into Nurse (nurse_id, first_name, last_name)
-    values (1, 'Tom', 'Riddle');
+insert into Nurse (nurse_id, first_name, last_name, salary)
+    values (0, 'Alexa', 'Johnson', 2500);
 
-insert into Nurse (nurse_id, first_name, last_name)
-    values (2, 'Molly', 'Clifford');
+insert into Nurse (nurse_id, first_name, last_name, salary)
+    values (1, 'Tom', 'Riddle', 1000);
 
-insert into Nurse (nurse_id, first_name, last_name)
-    values (3, 'Anna', 'Thompson');
+insert into Nurse (nurse_id, first_name, last_name, salary)
+    values (2, 'Molly', 'Clifford', 3000);
 
-insert into Nurse (nurse_id, first_name, last_name)
-    values (4, 'Josefina', 'Montane');
+insert into Nurse (nurse_id, first_name, last_name, salary)
+    values (3, 'Anna', 'Thompson', 2900);
+
+insert into Nurse (nurse_id, first_name, last_name, salary)
+    values (4, 'Josefina', 'Montane', 4000);
 
 
 
 insert into My_Group (group_id, title, min_age, max_age)
-    values (0, 'g-1.1', 1, 3);
+    values (0, 'g-1.1', null, null);
 
 insert into My_Group (group_id, title, min_age, max_age)
     values (1, 'g-1.2', 1, 3);
@@ -70,6 +82,9 @@ insert into Nurse_Group (nurse_group_id, timestamp_unix, expire_at_unix, group_i
 insert into Nurse_Group (nurse_group_id, timestamp_unix, expire_at_unix, group_id, nurse_id)
     values (2, 1531422174, 1514764800, 2, 2);
 
+insert into Nurse_Group (nurse_group_id, timestamp_unix, expire_at_unix, group_id, nurse_id)
+    values (3, 1531422174, 1514764800, 0, 4);
+
 
 
 insert into Customer_Group (customer_group_id, timestamp_unix, expire_at_unix, customer_id, group_id)
@@ -80,6 +95,15 @@ insert into Customer_Group (customer_group_id, timestamp_unix, expire_at_unix, c
 
 insert into Customer_Group (customer_group_id, timestamp_unix, expire_at_unix, customer_id, group_id)
     values (2, 1531422174, 1514764800, 6, 0);
+
+insert into Customer_Group (customer_group_id, timestamp_unix, expire_at_unix, customer_id, group_id)
+    values (3, 1531422174, 1514764800, 8, 1);
+
+insert into Customer_Group (customer_group_id, timestamp_unix, expire_at_unix, customer_id, group_id)
+    values (4, 1531422174, 1514764800, 9, 1);
+
+insert into Customer_Group (customer_group_id, timestamp_unix, expire_at_unix, customer_id, group_id)
+    values (5, 1531422174, 1514764800, 10, 1);
 
 
 
@@ -110,7 +134,7 @@ insert into Activity (
     description,
     group_id,
     place_id) values (
-      0, 1535796000, 3600, 'lunch', 0, 2
+      1, 1535796000, 3600, 'lunch', 0, 2
     );
 
 insert into Activity (
@@ -120,5 +144,15 @@ insert into Activity (
     description,
     group_id,
     place_id) values (
-      0, 1535799600, 7200, 'free time', 0, 3
+      2, 1535799600, 7200, 'free time', 0, 3
+    );
+
+insert into Activity (
+    activity_id,
+    start_at_unix,
+    duration_in_seconds,
+    description,
+    group_id,
+    place_id) values (
+      3, 1535788800, 7200, 'revenge', 1, 0
     );

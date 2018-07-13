@@ -50,7 +50,7 @@
 -- the intersect method combines the row only if they occur in both left-hand and right-hand quieries
 -- select job from emp where deptno = 10 intersect select job from emp where deptno = 30;
 
--- 12
+-- 12 ???
 -- works only for sql server
 -- combines row only if left-hand side does not occur in the right-hand side
 -- select job from emp where deptno = 10 except select job from emp where deptno = 30;

@@ -27,6 +27,7 @@ create table Nurse (
   last_name varchar2(45) not null,
   phone varchar2(45),
   address varchar2(45),
+  salary number(10),
   constraint pk_nurse primary key (nurse_id)
 );
 
